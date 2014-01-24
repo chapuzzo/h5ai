@@ -1,0 +1,16 @@
+- var bgImage = "<?php echo rand(1,23); ?>"
+- var url = "http://www.juniorsmd.org/"
+- var lang = 'es'
+
+div#jmd
+    div#cabecera( style!="background: url('http://www.juniorsmd.org/images/cabeceras/imagencabecera_#{bgImage}.png') 0px 0% no-repeat;" )
+        div#categoriasestaticas
+            div( id!='#{lang}_nuestraidentidad' )
+                a( href!="#{url}#{lang}/nuestraidentidad")
+            div( id!='#{lang}_quehacemos' )
+                a( href!="#{url}#{lang}/quehacemos" )
+            div( id!='#{lang}_dondeestamos' )
+                a( href!="#{url}#{lang}/dondeestamos" )
+            div( id!='#{lang}_nuestrahistoria' )
+                a( href!="#{url}#{lang}/nuestrahistoria" )
+        a#jlogo( href!="#{url}#{lang}" )

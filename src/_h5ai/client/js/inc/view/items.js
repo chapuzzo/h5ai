@@ -18,7 +18,12 @@ modulejs.define('view/items', ['_', '$', 'core/settings', 'core/resource', 'core
 						'</a>' +
 					'</li>',
 		hintTemplate = '<span class="hint"/>',
-		contentTemplate = '<div id="content">' +
+		fallbackImg = 'http://www.juniorsmd.org/images/titulossecciones/es_TituloRecursos.png',
+		contentTemplate = 
+						'<div id="content">' +
+						'<div id="nombre"><img src="'+
+						fallbackImg +
+						'" alt="Recursos" style="top=10px; border:2px dotted green;" /></div>' +
 							'<div id="view">' +
 								'<ul id="items" class="clearfix">' +
 									'<li class="header">' +
@@ -117,6 +122,9 @@ modulejs.define('view/items', ['_', '$', 'core/settings', 'core/resource', 'core
 			} else {
 				$empty.hide();
 			}
+
+			var label = _.pluck(item.getCrumb(), 'label').pop();
+			$('#nombre').html(label.toUpperCase());
 		},
 
 		onLocationRefreshed = function (item, added, removed) {

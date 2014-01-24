@@ -134,6 +134,18 @@ Options
 	},
 
 	/*
+	Allow searching under current folder.
+
+	 ?? Space separated sequences get OR-ed. ?? not yet!
+
+	 ?? Filters will be treated as JavaScript regular expressions
+	if you prefix them with "re:". ?? not yet!
+	*/
+	"search": {
+		"enabled": true
+	},
+
+	/*
 	Calc the size of folders.
 	*/
 	"foldersize": {

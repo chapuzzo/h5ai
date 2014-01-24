@@ -64,6 +64,7 @@ modulejs.define('model/item', ['_', 'core/types', 'core/event', 'core/settings',
 				self.isContentFetched = true;
 			}
 
+			console.log(self);
 			return self;
 		},
 
