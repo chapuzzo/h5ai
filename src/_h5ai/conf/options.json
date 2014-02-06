@@ -115,8 +115,8 @@ Options
 	- packageName: basename of the download package, null for current foldername
 	*/
 	"download": {
-		"enabled": false,
-		"type": "php-tar",
+		"enabled": true,
+		"type": "shell-zip",
 		"packageName": null
 	},
 
@@ -180,7 +180,7 @@ Options
 	*/
 	"l10n": {
 		"enabled": true,
-		"lang": "en",
+		"lang": "es",
 		"useBrowserLang": true
 	},
 
@@ -200,7 +200,7 @@ Options
 		2: mode, servername and -version
 	*/
 	"mode": {
-		"enabled": false,
+		"enabled": true,
 		"display": 2
 	},
 

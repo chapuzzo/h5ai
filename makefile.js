@@ -93,7 +93,7 @@ module.exports = function (make) {
 			.uglifyjs({header: header})
 			.WRITE(mapSrc);
 
-		$(src + ': _h5ai/client/css/*.less')
+		$(src + ': _h5ai/client/css/*.less')//, _h5ai/client/css/*.css ')
 			.modified(mapSrc, $(src + ': _h5ai/client/css/**'))
 			.less()
 			.cssmin({header: header})
